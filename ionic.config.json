@@ -1,0 +1,7 @@
+{
+  "name": "t3",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
