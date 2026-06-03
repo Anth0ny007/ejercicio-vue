@@ -17,7 +17,7 @@
       </ion-header>
 
       <div id="container">
-        <h1 class="title">Traductor de número a letras</h1>
+        <h1 class="titlePage">Traductor de número a letras</h1>
         
         <div class="content">
           <input type="number" v-model.number="digito" placeholder="Introduzca un número">
@@ -122,8 +122,9 @@ function convNumero(num: number): string{
   margin: 0;
 }
 
-.title{
-  margin-bottom: 50px;
+.titlePage{
+  margin-bottom: 40px;
+  font-size: 40px;
 }
 
 .content input{

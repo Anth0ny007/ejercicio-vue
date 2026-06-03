@@ -17,7 +17,7 @@
       </ion-header>
 
       <div id="container">
-        <h1 class="titlePresentacion"> Presentación</h1>
+        <h1 class="titlePage"> Presentación</h1>
 
         <hr>
 
@@ -67,9 +67,9 @@ import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, Io
   text-decoration: none;
 }
 
-.titlePresentacion{
+.titlePage{
   font-size: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .imgPerfil img{

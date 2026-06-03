@@ -91,8 +91,8 @@ const sumar = () => {
 }
 
 .titlePage{
-  font-size: 38px;
-  margin-bottom: 35px;
+  font-size: 40px;
+  margin-bottom: 40px;
 }
 
 .n1, .n2{

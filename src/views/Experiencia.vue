@@ -17,8 +17,13 @@
       </ion-header>
 
       <div id="container">
-        <strong class="capitalize">{{ $route.params.id }}</strong>
-        <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+        <h1 class="titlePage">Experiencia Personal</h1>
+        
+        <div>
+          <img src="" alt="QR Video">
+        </div>
+
+        <a href="#">Ir al Video</a>
       </div>
     </ion-content>
   </ion-page>
@@ -52,5 +57,10 @@ import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, Io
 
 #container a {
   text-decoration: none;
+}
+
+.titlePage{
+  margin-bottom: 40px;
+  font-size: 40px;
 }
 </style>

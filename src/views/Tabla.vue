@@ -17,7 +17,7 @@
       </ion-header>
 
       <div id="container">
-        <h1 class="title">Tabla de Multiplicar</h1>
+        <h1 class="titlePage">Tabla de Multiplicar</h1>
         
         <div class="cont-mult">
           <input type="number" v-model.number="num" placeholder="Ingrese un numero">
@@ -86,6 +86,11 @@ const calc = () => {
 
 #container a {
   text-decoration: none;
+}
+
+.titlePage{
+  margin-bottom: 40px;
+  font-size: 40px;
 }
 
 .cont-mult input{
