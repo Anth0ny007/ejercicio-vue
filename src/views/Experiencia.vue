@@ -18,12 +18,8 @@
 
       <div id="container">
         <h1 class="titlePage">Experiencia Personal</h1>
-        
-        <div>
-          <img src="" alt="QR Video">
-        </div>
 
-        <a href="#">Ir al Video</a>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/7ujVWezbPmQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
       </div>
     </ion-content>
   </ion-page>
