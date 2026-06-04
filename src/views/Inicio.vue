@@ -18,18 +18,12 @@
 
       <div id="container">
         <h1 class="titlePage"> Presentación</h1>
-
-        <hr>
-
+        
         <div class="imgPerfil">
           <img src="/public/foto.jpg" alt="Foto perfil">
         </div>
-                
-        <hr>
 
         <p>Anthony Urbaez - 2023-1394</p>
-        
-        <hr>
 
         <p>20231394@itla.edu.do</p>
       </div>
@@ -51,16 +45,10 @@ import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, Io
   transform: translateY(-50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
 #container p {
   font-size: 16px;
   line-height: 22px;
   color: #8c8c8c;
-  margin: 0;
 }
 
 #container a {

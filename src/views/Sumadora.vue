@@ -21,11 +21,11 @@
         
         <div class="panelCalc">
           <div class="n1">
-            <input type="number" v-model.number="num1" placeholder="Ingrese un número">
+            <input type="number" v-model.number="num1" placeholder="Ingrese un número" @focus="limpiarNum1">
           </div>
 
           <div class="n2">
-            <input type="number" v-model.number="num2" placeholder="Ingrese un número">
+            <input type="number" v-model.number="num2" vmodel.number="num" placeholder="Ingrese un número" @focus="limpiarNum2">
           </div>
 
           <div class="cont-btnSum">
@@ -33,9 +33,12 @@
           </div>
         </div>
 
-        <div id="resultado">
-          <span class="texto-result">El resultado es: </span> <span class="result">{{ resultado }}</span>
+        <div class="resultado">
+          <div class="mensajeR">
+            <p>{{ mensaje }}</p>
+          </div>
           
+          <span class="texto-result">El resultado es: </span> <span class="result">{{ resultado }}</span>
         </div>
       </div>
     </ion-content>
@@ -46,23 +49,34 @@
 import{ref} from 'vue';
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
 
-// const num1 = ref();
-// const num2 = ref();
 const num1 = ref<number | null>(null);
 const num2 = ref<number | null>(null);
 const resultado = ref();
+const mensaje = ref();
+
+
+// Borrar anterior numero
+const limpiarNum1 = () => {
+  num1.value = null;
+}
+const limpiarNum2 = () => {
+  num2.value = null;
+}
 
 const sumar = () => {
   if(num1.value === null && num2.value === null){
-    resultado.value = 'Ingrese los valores';
+    mensaje.value = 'Ingrese los valores';
+    resultado.value = 0;
   }
 
   else if(num1.value! || num2.value!){
+    mensaje.value = '';
     resultado.value = num1.value! + num2.value!;
   }
 
   else{
-    resultado.value = 'Ingrese los valores';
+    mensaje.value = 'Ingrese los valores';
+    resultado.value = 0;
   }
 };
 
@@ -76,18 +90,6 @@ const sumar = () => {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-  color: #8c8c8c;
-  margin: 0;
 }
 
 .titlePage{
@@ -117,7 +119,14 @@ const sumar = () => {
   cursor: pointer;
 }
 
-#resultado .result{
+.resultado .result{
   font-size: 18px;
+}
+
+.resultado .mensajeR{
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #8c8c8c;
 }
 </style>

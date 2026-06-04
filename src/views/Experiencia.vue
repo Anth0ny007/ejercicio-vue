@@ -19,7 +19,14 @@
       <div id="container">
         <h1 class="titlePage">Experiencia Personal</h1>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/7ujVWezbPmQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        <div class="cont-video">
+          <iframe src="https://www.youtube.com/embed/7ujVWezbPmQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="texto">
+          <p>Esta fue mi experiencia utilizando Ionic por primera vez</p>
+        </div>
+        
       </div>
     </ion-content>
   </ion-page>
@@ -39,18 +46,6 @@ import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, Io
   transform: translateY(-50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-  color: #8c8c8c;
-  margin: 0;
-}
-
 #container a {
   text-decoration: none;
 }
@@ -58,5 +53,12 @@ import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, Io
 .titlePage{
   margin-bottom: 40px;
   font-size: 40px;
+}
+
+.texto{
+  margin: 30px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #8c8c8c;
 }
 </style>

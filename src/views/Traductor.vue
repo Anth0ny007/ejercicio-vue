@@ -24,9 +24,11 @@
 
           <div class="cont-btn">
             <ion-buttons @click="convertir" class="btn">Convertir</ion-buttons>
-          </div>          
+          </div>
 
-          <p>{{ result }}</p>
+          <div class="result-trad">
+            <p>{{ result }}</p>
+          </div>          
         </div>
       </div>
     </ion-content>
@@ -143,5 +145,13 @@ function convNumero(num: number): string{
   padding: 5px 20px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.result-trad{
+  margin-top: 20px;
+}
+
+.result-trad p::first-letter{
+  text-transform: uppercase;
 }
 </style>

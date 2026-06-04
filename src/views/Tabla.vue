@@ -20,12 +20,16 @@
         <h1 class="titlePage">Tabla de Multiplicar</h1>
         
         <div class="cont-mult">
-          <input type="number" v-model.number="num" placeholder="Ingrese un numero">
+          <input type="number" v-model.number="num" placeholder="Ingrese un numero" @focus="limpiarNum">
             
           <div class="btn-cont">
             <ion-buttons @click="calc" class="btn-calc">Ver tabla</ion-buttons>
           </div>
         </div>
+
+        <p>
+          {{ mensaje }}
+        </p>
 
         <div v-for="resultado in resultados" :key="resultado" >
           {{ resultado }}
@@ -41,14 +45,23 @@ import { ref } from 'vue';
 
 const num = ref<number | null >(null);
 const resultados = ref<string[]>([]);
+const mensaje = ref();
+
+// borrar numero anterior
+const limpiarNum = () => {
+  num.value = null;
+}
 
 const calc = () => {
 
   if(num.value === null){
-    resultados.value = ['Digite un número'];
+    mensaje.value = 'Digite un número';
+    resultados.value = []
     return;
   }
 
+  // resetear todo a nulo
+  mensaje.value = '';
   resultados.value = [];
 
   for(let i = 0; i <= 13; i++){
@@ -70,11 +83,6 @@ const calc = () => {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
 }
 
 #container p {

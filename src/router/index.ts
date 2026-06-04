@@ -8,23 +8,23 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/Inicio',
-    component: () => import('../views/inicio.vue')
+    component: () => import('../views/Inicio.vue')
   },
   {
     path: '/Sumadora',
-    component: () => import('../views/sumadora.vue')
+    component: () => import('../views/Sumadora.vue')
   },
   {
     path: '/Traductor',
-    component: () => import('../views/traductor.vue')
+    component: () => import('../views/Traductor.vue')
   },
   {
     path: '/Tabla',
-    component: () => import('../views/tabla.vue')
+    component: () => import('../views/Tabla.vue')
   },
   {
     path: '/Experiencia',
-    component: () => import('../views/experiencia.vue')
+    component: () => import('../views/Experiencia.vue')
   },
   {
     path: '/folder/:id',

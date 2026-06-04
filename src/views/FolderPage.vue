@@ -17,8 +17,8 @@
       </ion-header>
 
       <div id="container">
-        <strong class="capitalize">{{ $route.params.id }}</strong>
-        <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+        <h1 class="capitalize">Pagina en mantenimiento</h1>
+        <p><a target="_blank" rel="noopener noreferrer" href="/src/views/Inicio.vue">Ir al inicio</a></p>
       </div>
     </ion-content>
   </ion-page>
@@ -38,16 +38,15 @@ import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, Io
   transform: translateY(-50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.titlePage{
+  font-size: 40px;
+  margin-bottom: 40px;
 }
 
 #container p {
   font-size: 16px;
   line-height: 22px;
   color: #8c8c8c;
-  margin: 0;
 }
 
 #container a {
